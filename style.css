@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(136.56deg, #8a53b6 0%, #cea2d0 97.42%);
+}
+
+.jar-mode {
+    position: relative;
+    background-color: #f3f4f6;
+    width: 50%;
+}
+.inputBlock {
+    position: relative;
+    width: 50%;
+    background-color: #fff;
+}
