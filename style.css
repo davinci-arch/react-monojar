@@ -3,27 +3,562 @@
     padding: 0;
 }
 
-body{
-    height: 100vh;
+body {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(136.56deg, #8a53b6 0%, #cea2d0 97.42%);
+    font: 16px "Inter", "LatoWeb", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.canvas {
+    display: flex;
+    max-width: 990px;
+    min-height: 680px;
+    margin-top: 80px;
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 24px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.jar-mode,
+.inputBlock {
+    width: 50%;
+    position: relative;
+
+}
+header {
+    display: flex;
+    flex-direction: column;
+}
+.jar-mode {
+    background-color: #f3f4f6;
+    z-index: 0;
+}
+
+.inputBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    background-color: #fff;
+    z-index: 0;
+    min-height: 620px !important;
+
+}
+
+.short-logo {
+    display: block;
+    margin: 42px auto 24px auto;
+}
+
+.field {
+    height: auto;
+    text-align: center;
+}
+
+.field.avatar {
+    width: auto;
+    margin-top: 92px;
+}
+
+.field {
+    padding: 0 20px;
+    margin-left: auto;
+}
+
+.avatar {
+    margin: 20px 0;
+}
+
+#jar-state {
+    position: relative;
+    text-align: center;
+}
+
+
+.avatar .jarLogo {
+    width: 215px;
+    height: 215px;
+}
+
+img {
+    background-size: cover;
+    border: 0;
+}
+
+.avatar .jar-container {
+    position: absolute;
+    top: 5%;
+    left: 34%;
+}
+
+.field.cardInfo {
+    margin-top: 4px;
+    min-width: 340px;
+    margin: 0 57px;
+}
+
+.avatar .jar-container .grid-container {
+    position: absolute;
+    top: 26px;
+    left: 13px;
+}
+
+.avatar .jar-container img.grid {
+    width: 42px;
+    height: 168px;
+}
+
+.avatar .jar-container .jar-label {
+    font-weight: 800;
+    font-size: 10px;
+    color: #8e5b5b;
+    position: absolute;
+    white-space: nowrap;
+}
+.avatar .jar-container .jar-label.jar-goal {
+    position: relative;
+    bottom: 169px;
+    left: 13px;
+}
+
+.avatar .jar-container .jar-label.jar-middle {
+    position: relative;
+    bottom: 106px;
+    left: -1px;
+}
+
+.avatar .jar-container .jar-label.jar-bottom {
+    position: relative;
+    bottom: 45px;
+    left: -10px;
+}
+
+.avatar .jar-container img.glass {
+    height: 203px;
+    width: 155px;
+    background-size: cover;
+    border: 0;
+}
+
+.field.ownerInfo {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+    margin: 0 56px;
+}
+
+.field.name {
+    margin-top: 8px;
+    margin: 0 56px;
+}
+
+.description-box p:nth-child(n + 1) {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.jar-stats {
+    display: flex;
+    border-radius: 16px;
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: left;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.stats-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding: 0 20px;
+    margin: 12px 0;
+    border-right: solid #ccc 0.5px;
+}
+
+.stats-data:last-child {
+    border: none;
+}
+
+.jar-stats .stats-data img.icon {
+    margin-right: 16px;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+}
+
+.jar-stats .stats-data .stats-data-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.jar-stats .stats-data .stats-data-label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #808080;
+}
+
+.jar-stats .stats-data .stats-data-value {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+.field.copyright {
+    padding-bottom: 42px;
+    text-align: center;
+    max-width: 430px;
+    width: 100px;
+    margin-top: auto;
+}
+
+.gradient-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: -3px;
+    border-radius: 24px;
+    z-index: -1;
+    background: linear-gradient(92.12deg, #57b5f9 0%, #da11ba 100%);
+
+}
+
+.gradient-container {
+    position: relative;
+    padding: 24px;
+    box-sizing: border-box;
+    width: 394px;
+    background-clip: padding-box !important;
+    border: solid 3px transparent;
+    background: #fff;
+    border-radius: 24px;
+    margin-top: -30px;
+    margin-bottom: 32px;
+}
+
+.jar-top-up-title {
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 0 !important;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.jar-top-up-title img.money-emojy {
+    width: 16px;
+    margin-left: 0.5em;
+    margin-bottom: -3px;
+}
+
+.money-input-container {
+    text-align: center;
+}
+
+.money-input-block.empty {
+    opacity: .4;
+}
+
+.money-input-block {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 48px;
+    padding: 20px 0;
+}
+
+.money-input-contenteditable {
+    outline: 0;
+    padding-right: 1px;
+}
+
+.money-input-trailing {
+    white-space: pre-wrap;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hidden {
+    display: none;
+}
+
+.choice-row {
+    display: flex;
+    margin: auto;
+    margin-top: 0;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.choice-row .chip-button:last-child {
+    margin-right: 0;
+}
+
+.choice-row .chip-button:first-child {
+    margin-left: 0;
+}
+
+.choice-row .chip-button:hover{
+    background-color: #cccccc78;
+}
+
+.choice-row .chip-button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 0 3px;
+    text-align: center;
+    margin: 0 8px;
+    cursor: pointer;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+
+.choice-row .chip-button .main-label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.inputBlock .field {
+    max-width: 306px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    background: transparent;
+    padding: 0 16px;
+    height: 56px;
+}
+
+.field input.inputField {
+    text-transform: none;
+    background-color: none;
+    text-align: left;
+    border: 0;
+    color: #000;
+    height: 41px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 0;
+    margin-top: 12px;
+    box-sizing: border-box;
+    padding: 0;
+    outline: none;
+}
+
+.inputBlock .field label {
+    opacity: .6;
+    color: #000;
+}
+
+.field.card-holder,
+.field.payment-comment {
+    transition: all .1s ease-in;
+}
+.field.card-holder:focus-within {
+    border: 3px solid #000;
+}
+
+.field.payment-comment:focus-within {
+    border: 3px solid #000;
+}
+
+.field label {
+    cursor: default;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    top: -38px;
+    display: flex;
+    justify-content: start;
+}
+
+.mono-pay.shown {
+    display: flex;
+}
+.mono-pay {
+    cursor: pointer;
+    margin-bottom: 16px;
+    height: 48px;
+    margin: 0 auto;
+    width: 340px;
+    border-radius: 8px;
+    background-color: #000;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+.mono-pay:hover,
+.tap-to-pay:hover {
+    background-color: rgba(0, 0, 0, .8);
+}
+.mono-pay .logo{
+    height: 26px;
+    margin: auto;
+}
+
+.tap-to-pay {
+    height: 48px;
+    margin: 0 auto;
+    width: 340px;
+    border-radius: 8px;
+    background-color: #000;
+    overflow: hidden;
+
+}
+.gpay-button-fill {
+    width: 100%;
+    height: inherit;
+}
+
+.gpay-button-fill > .gpay-button {
+    width: 100%;
+    padding: 12px 15% 10px;
+    height: inherit;
+    background-color: #000;
+    box-shadow: none;
+}
+.gpay-button.plain{
+    background: url(https://www.gstatic.com/instantbuy/svg/dark_gpay.svg);
+    min-width: 90px;
+    background-origin: content-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    min-height: 40px;
+}
+button.gpay-button {
+    border: 0;
+    border-radius: 0;
+}
+
+.footer-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    z-index: 1;
+    margin-bottom: 16px;
+    max-width: 990px;
+    width: 100%;
+}
+
+.footer-holder .footer-copyright {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    opacity: .8;
     
 }
 
-.container{
+.button-holder {
     display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(136.56deg, #8a53b6 0%, #cea2d0 97.42%);
 }
 
-.jar-mode {
+.widget-button {
+    background: rgba(255, 255, 255, 0.08);
+    border: 0.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
     position: relative;
-    background-color: #f3f4f6;
-    width: 50%;
+    align-self: end;
+    padding: 0 16px;
+    height: 40px;
+    color: #fff;
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: background 0.2s ease-in-out;
+    cursor: pointer;
 }
-.inputBlock {
-    position: relative;
-    width: 50%;
-    background-color: #fff;
+.widget-button:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+.widget-button-icon {
+    display: flex;
+    align-items: center;
+}
+.widget-button-icon img {
+    width: 16px;
+    height: 16px;
+}
+.widget-button-icon-txt {
+    margin-left: 8px;
+}
+.widget-button + .widget-button {
+    margin-left: 16px;
+}
+#manual-pan-trigger.shown {
+    display: flex;
+}
+#manual-pan-trigger{
+    flex-direction: column;
+    width: 100%;
+    margin-left: 24px;
+    margin-right: 24px;
+    box-sizing: border-box;
+    max-width: 340px;
+    margin-bottom: 42px;
+}
+#manual-pan-trigger .splitter{
+    margin-top: 24px;
+    margin-bottom: 8px;
+    border-top: 0.5px solid #ccc;
+}
+#card-input-button {
+    display: flex;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+    background: transparent;
+    color: #e85e5b;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.2s;
+    border-radius: 8px;
+}
+#card-input-button .card-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
 }
