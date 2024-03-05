@@ -281,6 +281,11 @@ img {
     opacity: .4;
 }
 
+.money-input-block.incorrect {
+    opacity: .5;
+    color: #b30953;
+}
+
 .money-input-block {
     display: flex;
     justify-content: center;
@@ -298,6 +303,17 @@ img {
     white-space: pre-wrap;
     display: flex;
     align-items: flex-end;
+}
+.money-input-subtitle {
+    margin-top: -24px;
+    margin-bottom: 18px;
+    margin-right: 16px;
+    margin-left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    color: #808080;
 }
 
 .hidden {
@@ -442,6 +458,7 @@ img {
     background-color: #000;
     overflow: hidden;
     margin-bottom: 16px;
+    user-select: none;
 }
 
 .mono-pay:hover,

@@ -22,8 +22,8 @@
                                 <img class="glass" src="https://send.monobank.ua/img/jar/uah_33.png" alt="Jar load">
                                 <div class="grid-container">
                                     <img src="https://send.monobank.ua/img/jar/grid.png" alt="" class="grid">
-                                    <div class="jar-label jar-goal">10 000</div>
-                                    <div class="jar-label jar-middle">5 000</div>
+                                    <div class="jar-label jar-goal"></div>
+                                    <div class="jar-label jar-middle"></div>
                                     <div class="jar-label jar-bottom">0</div>
                                 </div>
                             </div>
@@ -48,14 +48,14 @@
                                 <img src="https://send.monobank.ua/img/collected.svg" alt="icon" class="icon">
                                 <div class="stats-data-text">
                                     <div class="stats-data-label">Накопичено</div>
-                                    <div class="stats-data-value" id="amount_money_in_jar">10 ₴</div>
+                                    <div class="stats-data-value" id="amount_money_in_jar"></div>
                                 </div>
                             </div>
                             <div class="stats-data">
                                 <img src="https://send.monobank.ua/img/target.svg" alt="icon" class="icon">
                                 <div class="stats-data-text">
                                     <div class="stats-data-label">Ціль</div>
-                                    <div class="stats-data-value">10 000 ₴</div>
+                                    <div class="stats-data-value" id="target-sum">25 000 ₴</div>
                                 </div>
                             </div>
                         </div>
@@ -71,20 +71,20 @@
                     </div>
                     <div class="money-input-container">
                         <div class="money-input-block empty">
-                            <div class="money-input-contenteditable" contenteditable="true" inputmode="decimal" id="amountofMoneyToSend">0</div>
+                            <div class="money-input-contenteditable" contenteditable="true" inputmode="decimal" id="amountofMoneyToSend" oninput="changeMoney()">0</div>
                             <div class="money-input-trailing"> ₴</div>
                         </div>
                         <div class="money-input-subtitle hidden">Сума повинна бути від 10 ₴ до 29 999 ₴</div>
                     </div>
                     <div class="choice-row">
                         <div class="chip-button">
-                            <div class="main-label" onclick="addTemplateMoney(this)">+100 ₴</div>
+                            <div class="main-label" onclick="addTemplateMoney(this),changeMoney()">+100 ₴</div>
                         </div>
                         <div class="chip-button">
-                            <div class="main-label" onclick="addTemplateMoney(this)">+500 ₴</div>
+                            <div class="main-label" onclick="addTemplateMoney(this),changeMoney()">+500 ₴</div>
                         </div>
                         <div class="chip-button">
-                            <div class="main-label" onclick="addTemplateMoney(this)">+1 000 ₴</div>
+                            <div class="main-label" onclick="addTemplateMoney(this),changeMoney()">+1 000 ₴</div>
                         </div>
                     </div>
                 </div>
