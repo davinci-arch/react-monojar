@@ -8,11 +8,7 @@ window.onload = function () {
         localStorage.setItem("current_money", "0 ₴");
     }
     amountOfMoneyInJarElem.textContent = localStorage.getItem("current_money");
-
     calculateRangeOfFilledJar();
-    
-
-    // Position the cursor after the text
     putCursorAfterText();
 }
 function calculateRangeOfFilledJar() {

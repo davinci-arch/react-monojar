@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -94,7 +94,7 @@
                     <span class="err"></span>
                 </div>
                 <div class="field payment-comment material">
-                    <input type="text" name="" id="comment" class="inputField" maxlength="160" autocomplete="cc-name">
+                    <input type="text" id="comment" name="comment" class="inputField" maxlength="160" autocomplete="cc-name">
                     <label id="x-comment-field" for="comment">Коментар (необов'язково)</label>
                 </div>
                 <div class="mono-pay shown" onclick="sendMoney()">
@@ -119,14 +119,13 @@
                         <div class="card-splitter-line"></div>
                     </div>
                     <div class="field material">
-                        <input type="tel" id="cardNumber" class="inputField" autocomplete="cc-name" inputmode="decimal">
+                        <input id="cardNumber" class="inputField" autocomplete="cc-number" inputmode="decimal">
                         <label for="cardNumber">Номер картки</label>
                         <span class="err"></span>
                     </div>
                     <div class="field subfielded">
                         <div class="subField material">
-                            <input type="tel" id="expiryM" class="inputField" maxlength="2" max="12"
-                                autocomplete="cc-exp-month" inputmode="decimal">
+                            <input type="tel" id="expiryM" class="inputField" maxlength="2" autocomplete="cc-exp-month" inputmode="decimal">
                             <label id="x-month" for="expiryM">Місяць</label>
                             <span class="err"></span>
                         </div>
@@ -147,7 +146,6 @@
                     <div class="field btn">
                         <button id="btn" class="pure-button pure-button-primary pure-u-1" disabled>
                             <span id="x-top-up">Поповнити банку</span>
-                            <div class="btnLoader loader hidden"></div>
                         </button>
                     </div>
                 </div>
