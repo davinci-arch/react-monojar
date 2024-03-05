@@ -48,7 +48,7 @@
                                 <img src="https://send.monobank.ua/img/collected.svg" alt="icon" class="icon">
                                 <div class="stats-data-text">
                                     <div class="stats-data-label">Накопичено</div>
-                                    <div class="stats-data-value">10 ₴</div>
+                                    <div class="stats-data-value" id="amount_money_in_jar">10 ₴</div>
                                 </div>
                             </div>
                             <div class="stats-data">
@@ -71,20 +71,20 @@
                     </div>
                     <div class="money-input-container">
                         <div class="money-input-block empty">
-                            <div class="money-input-contenteditable" contenteditable="true" inputmode="decimal">0</div>
+                            <div class="money-input-contenteditable" contenteditable="true" inputmode="decimal" id="amountofMoneyToSend">0</div>
                             <div class="money-input-trailing"> ₴</div>
                         </div>
                         <div class="money-input-subtitle hidden">Сума повинна бути від 10 ₴ до 29 999 ₴</div>
                     </div>
                     <div class="choice-row">
                         <div class="chip-button">
-                            <div class="main-label">+100 ₴</div>
+                            <div class="main-label" onclick="addTemplateMoney(this)">+100 ₴</div>
                         </div>
                         <div class="chip-button">
-                            <div class="main-label">+500 ₴</div>
+                            <div class="main-label" onclick="addTemplateMoney(this)">+500 ₴</div>
                         </div>
                         <div class="chip-button">
-                            <div class="main-label">+1 000 ₴</div>
+                            <div class="main-label" onclick="addTemplateMoney(this)">+1 000 ₴</div>
                         </div>
                     </div>
                 </div>
@@ -97,10 +97,10 @@
                     <input type="text" name="" id="comment" class="inputField" maxlength="160" autocomplete="cc-name">
                     <label id="x-comment-field" for="comment">Коментар (необов'язково)</label>
                 </div>
-                <div class="mono-pay shown">
+                <div class="mono-pay shown" onclick="sendMoney()">
                     <img src="https://send.monobank.ua/img/mono_pay.svg" alt="mono Pay" class="logo">
                 </div>
-                <div class="tap-to-pay shown">
+                <div class="tap-to-pay shown" onclick="sendMoney()">
                     <div class="gpay-button-fill">
                         <button type="button" aria-label="Google Pay" class="gpay-button plain"></button>
                     </div>
