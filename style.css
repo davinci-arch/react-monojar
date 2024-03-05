@@ -67,6 +67,7 @@ header {
     text-align: center;
 }
 
+
 .field.avatar {
     width: auto;
     margin-top: 92px;
@@ -358,6 +359,7 @@ img {
     background: transparent;
     padding: 0 16px;
     height: 56px;
+    position: relative;
 }
 
 .field input.inputField {
@@ -380,12 +382,35 @@ img {
 .inputBlock .field label {
     opacity: .6;
     color: #000;
+    max-height: 25px;
+    /* transition: all .3s linear; */
+}
+.inputBlock .material label{
+    cursor: text;
+}
+
+.material{
+    position: relative;
+}
+.material label {
+    position: absolute !important;
+    top: 15px !important; 
+    left: 15px;
+    right: 0;
+    bottom: 0;
+    transition: all .1s ease;
+}
+.material:hover label,
+.material:focus-within label {
+    font-size: 12px;
+    top: 3px !important;
 }
 
 .field.card-holder,
 .field.payment-comment {
     transition: all .1s ease-in;
 }
+
 
 .field:focus-within {
     border: 3px solid #000;
@@ -607,6 +632,9 @@ button.gpay-button {
     width: 90px;
     margin-right: 16px;
     min-height: 100px;
+}
+.inputBlock .field .subField label {
+    left: 0;
 }
 .inputBlock .field .subField:last-child {
     margin-right: 0;

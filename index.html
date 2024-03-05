@@ -88,14 +88,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="field card-holder">
+                <div class="field card-holder material">
                     <input id="cardHolder" type="text" class="inputField" autocomplete="cc-name">
-                    <label id="x-name-field">Ваше ім'я (необов'язково)</label>
+                    <label id="x-name-field" for="cardHolder">Ваше ім'я (необов'язково)</label>
                     <span class="err"></span>
                 </div>
-                <div class="field payment-comment">
+                <div class="field payment-comment material">
                     <input type="text" name="" id="comment" class="inputField" maxlength="160" autocomplete="cc-name">
-                    <label id="x-comment-field">Коментар (необов'язково)</label>
+                    <label id="x-comment-field" for="comment">Коментар (необов'язково)</label>
                 </div>
                 <div class="mono-pay shown">
                     <img src="https://send.monobank.ua/img/mono_pay.svg" alt="mono Pay" class="logo">
@@ -118,29 +118,29 @@
                         <div class="label">або уведіть дані картки</div>
                         <div class="card-splitter-line"></div>
                     </div>
-                    <div class="field">
+                    <div class="field material">
                         <input type="tel" id="cardNumber" class="inputField" autocomplete="cc-name" inputmode="decimal">
-                        <label>Номер картки</label>
+                        <label for="cardNumber">Номер картки</label>
                         <span class="err"></span>
                     </div>
                     <div class="field subfielded">
-                        <div class="subField">
+                        <div class="subField material">
                             <input type="tel" id="expiryM" class="inputField" maxlength="2" max="12"
                                 autocomplete="cc-exp-month" inputmode="decimal">
-                            <label id="x-month">Місяць</label>
+                            <label id="x-month" for="expiryM">Місяць</label>
                             <span class="err"></span>
                         </div>
                         <span class="borderLine"></span>
-                        <div class="subField">
+                        <div class="subField material">
                             <input type="tel" id="expiryY" class="inputField" maxlength="4" autocomplete="cc-exp-year"
                                 inputmode="decimal">
-                            <label id="x-year">Рік</label>
+                            <label id="x-year" for="expiryY">Рік</label>
                             <span class="err"></span>
                         </div>
                         <span class="borderLine"></span>
-                        <div class="subField">
+                        <div class="subField material">
                             <input type="tel" id="cvv" class="inputField" maxlength="3" inputmode="decimal">
-                            <label id="x-cvv">CVC2</label>
+                            <label id="x-cvv" for="cvv">CVC2</label>
                             <span class="err"></span>
                         </div>
                     </div>
