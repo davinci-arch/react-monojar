@@ -418,7 +418,8 @@ img {
     transition: all .1s ease;
 }
 .material:hover label,
-.material:focus-within label {
+.material:focus-within label,
+.material .keep-material {
     font-size: 12px;
     top: 3px !important;
 }

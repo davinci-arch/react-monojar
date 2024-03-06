@@ -80,6 +80,19 @@ inputMoneyField.addEventListener('keydown', function(event) {
     }
 })
 
+function keepMaterialInput(event) {
+    
+    let parentDiv = event.parentElement;
+    let labelElement = parentDiv.querySelector('.labelInput');
+    let inputValue = event.value.trim();
+    
+    if (inputValue === '') {
+        labelElement.classList.remove('keep-material');
+    } else {
+        labelElement.classList.add('keep-material');
+    }
+}
+
 function chnageTextInput(newValue) {
     inputMoneyField.textContent = newValue;
     putCursorAfterText();
