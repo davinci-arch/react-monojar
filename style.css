@@ -47,6 +47,18 @@ header {
     z-index: 0;
 }
 
+.jar-mode #jar-state .img {
+    background: url("https://jar-img.monobank.com.ua/N92.30.0021591888.jpg?ts=2023-07-20T14:33:15.758636825");
+    position: absolute;
+    margin-top: -70px !important;
+    margin-left: 128px;
+    height: 56px !important;
+    width: 56px !important;
+    border-radius: 32px !important;
+    border: 0 !important;
+    z-index: 2;
+    background-size: 100% 100%;
+}
 .inputBlock {
     display: flex;
     flex-direction: column;
@@ -79,7 +91,7 @@ header {
 }
 
 .avatar {
-    margin: 20px 0;
+    margin: 20px 120px;
 }
 
 #jar-state {
@@ -101,7 +113,7 @@ img {
 .avatar .jar-container {
     position: absolute;
     top: 5%;
-    left: 34%;
+    left: 18%;
 }
 
 .field.cardInfo {
@@ -231,7 +243,7 @@ img {
     margin-top: auto;
 }
 
-.gradient-container:before {
+.gradient-container::before {
     content: '';
     position: absolute;
     top: 0;

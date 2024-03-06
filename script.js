@@ -8,6 +8,8 @@ window.onload = function () {
         localStorage.setItem("current_money", "0 ₴");
     }
     amountOfMoneyInJarElem.textContent = localStorage.getItem("current_money");
+    sendMoney();
+
     calculateRangeOfFilledJar();
     putCursorAfterText();
 }
@@ -44,6 +46,10 @@ function sendMoney() {
 
     let targetVal = parseInt(document.getElementById('target-sum').textContent.replace(/₴/g, '').replace(/ /g, ''));
 
+    updateImgOfJar(sum, targetVal);
+}
+
+function updateImgOfJar(sum, targetVal) {
     if (sum <= (targetVal * 33) / 100) {
         document.getElementsByClassName("glass")[0].src = "https://send.monobank.ua/img/jar/uah_33.png"
     } else if (sum >= (targetVal * 50) / 100 && sum < targetVal) {
